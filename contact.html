@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - Santhosh Kumar</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="bg-image contact-page">
-  <!-- Navbar -->
+  <div class="background-animation"></div>
+
   <nav class="navbar">
     <div class="logo">Santhosh Kumar</div>
     <ul class="nav-links">
@@ -19,27 +20,27 @@
   </nav>
   <div class="navbar-line"></div>
 
-  <!-- Contact Section -->
   <section class="contact-section">
-    <h2 class="section-title">Contact Me</h2>
-    <form class="contact-form" action="https://formsubmit.co/santhoshkumar.j7373@gmail.com" method="POST">
-      <!-- Honeypot (hidden field for spam prevention) -->
-      <input type="text" name="_honey" style="display:none">
-      
-      <!-- Disable CAPTCHA -->
+    <form 
+      id="contactForm"
+      class="contact-form"
+      action="https://formsubmit.co/santhoshkumar.j7373@gmail.com" 
+      method="POST"
+    >
+      <!-- Hidden fields -->
       <input type="hidden" name="_captcha" value="false">
-
-      <!-- Redirect after success -->
       <input type="hidden" name="_next" value="thankyou.html">
 
+      <h2 class="section-title">Get in Touch</h2>
+      
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" placeholder="Your Message" required></textarea>
+      
       <button type="submit" class="btn">Send Message</button>
     </form>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Santhosh Kumar. All rights reserved.</p>
   </footer>

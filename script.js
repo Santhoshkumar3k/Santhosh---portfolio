@@ -42,7 +42,7 @@ document.querySelectorAll('.project-card, .about-content, .contact-form').forEac
   observer.observe(el);
 });
 
-// Optional: Scroll to top button (if added)
+// Optional: Scroll to top button
 const scrollTopBtn = document.querySelector('#scrollTop');
 if (scrollTopBtn) {
   window.addEventListener('scroll', () => {
@@ -51,5 +51,46 @@ if (scrollTopBtn) {
 
   scrollTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// Contact form submission using JS to avoid redirect issue
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // Stop default submission
+
+    const formData = new FormData(contactForm);
+    
+    // Disable button to prevent resubmission
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    fetch("https://formsubmit.co/ajax/santhoshkumar.j7373@gmail.com", {
+      method: "POST",
+      headers: {
+        'Accept': 'application/json'
+      },
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        // Reset form after success
+        contactForm.reset();
+        // Redirect to thank you page
+        window.location.href = "thankyou.html";
+      } else {
+        alert("Form submission failed. Please try again.");
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send Message";
+      }
+    })
+    .catch(error => {
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again.");
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Send Message";
+    });
   });
 }
