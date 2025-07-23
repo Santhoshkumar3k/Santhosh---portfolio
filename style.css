@@ -439,46 +439,53 @@ html, body {
   }
 } 
 
-/* Thank You Page Styling */
+/* Thank You Section */
 .thank-you-section {
-  padding: 5rem 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  text-align: center;
-  animation: fadeInUp 1.5s ease-in;
-  color: #fff;
-  flex: 1;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  animation: fadeInUp 1s ease;
+  padding: 2rem;
 }
 
 .thank-you-section h2 {
-  font-size: 2.5rem;
-  color: #ffa500;
+  font-size: 3rem;
+  color: #ff9800;
   margin-bottom: 1rem;
 }
 
 .thank-you-message {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  max-width: 600px;
+  color: #f0f0f0;
 }
 
 .thank-you-section .btn {
-  padding: 12px 24px;
-  background: linear-gradient(45deg, #ff9800, #ff5722);
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  background-color: #ff9800;
+  color: #1e1e2f;
   border: none;
-  border-radius: 30px;
-  cursor: pointer;
+  border-radius: 8px;
   text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .thank-you-section .btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+  background-color: #ffa733;
+}
+
+/* Optional fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
