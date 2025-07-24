@@ -7,41 +7,37 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="bg-image contact-page">
-  <div class="background-animation"></div>
+  <div class="page-wrapper">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">Santhosh Kumar</div>
+      <div class="menu-toggle"><span></span><span></span><span></span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="navbar-line slide-animation"></div>
 
-  <nav class="navbar">
-    <div class="menu-toggle" id="menuToggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="logo">Santhosh Kumar</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="navbar-line"></div>
-
-  <section class="contact-section">
-    <form id="contactForm" class="contact-form" action="https://formsubmit.co/santhoshkumar.j7373@gmail.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="thankyou.html">
-
+    <!-- Contact Section -->
+    <section class="contact-section">
       <h2 class="section-title">Get in Touch</h2>
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </section>
+      <p>I’d love to hear from you. Please fill out the form below to send me a message directly.</p>
+      <form id="contactForm" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Santhosh Kumar. All rights reserved.</p>
-  </footer>
-
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2025 Santhosh Kumar. All Rights Reserved.</p>
+    </footer>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

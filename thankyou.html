@@ -7,34 +7,32 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="bg-image thankyou-page">
-  <div class="background-animation"></div>
+  <div class="page-wrapper">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">Santhosh Kumar</div>
+      <div class="menu-toggle"><span></span><span></span><span></span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="navbar-line slide-animation"></div>
 
-  <nav class="navbar">
-    <div class="menu-toggle" id="menuToggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="logo">Santhosh Kumar</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="navbar-line"></div>
+    <!-- Thank You Section -->
+    <section class="contact-section">
+      <h2 class="section-title">Thank You!</h2>
+      <p>Your message has been successfully sent. I will get back to you soon.</p>
+      <a class="btn" href="index.html">Back to Home</a>
+    </section>
 
-  <section class="contact-section">
-    <h2 class="section-title">Thank You!</h2>
-    <p>Your message has been sent successfully. I’ll get back to you soon.</p>
-    <a href="index.html" class="btn">Back to Home</a>
-  </section>
-
-  <footer class="footer">
-    <p>&copy; 2025 Santhosh Kumar. All rights reserved.</p>
-  </footer>
-
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2025 Santhosh Kumar. All Rights Reserved.</p>
+    </footer>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

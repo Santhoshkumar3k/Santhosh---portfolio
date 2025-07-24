@@ -1,5 +1,3 @@
-// ✅ Updated script.js with consistent navbar-line animation on all pages
-
 document.addEventListener("DOMContentLoaded", function () {
   // === Floating Animation Delay ===
   const floatables = document.querySelectorAll('.float-up');
@@ -111,8 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // === Fix navbar-line animation to play on each page ===
   const navbarLine = document.querySelector('.navbar-line');
   if (navbarLine) {
-    navbarLine.style.animation = 'none';
-    navbarLine.offsetHeight; // force reflow
-    navbarLine.style.animation = 'slideIn 1s forwards ease-in-out';
+    navbarLine.classList.remove('navbar-line');
+    void navbarLine.offsetWidth; // trigger reflow
+    navbarLine.classList.add('navbar-line');
   }
 });
